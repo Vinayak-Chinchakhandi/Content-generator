@@ -18,7 +18,7 @@ This is an AI-powered content generator built using Flask and Google Generative 
 
 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/ai-content-generator.git
+git clone https://github.com/Vinayak-Chinchakhandi/Content-generator
 cd ai-content-generator
 
 2️⃣ Create a Virtual Environment
