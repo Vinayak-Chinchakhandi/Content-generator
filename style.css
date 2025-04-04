@@ -1,0 +1,202 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #283c86, #45a247);
+    color: #e8f5e9;
+    transition: background 0.5s ease;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('ai-pattern.svg');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.container {
+    width: 90%; /* Increased width */
+    max-width: 1200px; /* Increased max-width */
+    padding: 30px; /* Increased padding */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px; /* Increased border radius */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Increased shadow */
+    position: relative;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+.header h1 {
+    font-size: 3.0em; /* Increased font size */
+    font-family: 'Montserrat', sans-serif;
+    color: #a5d6a7;
+    margin-bottom: 15px; /* Increased margin */
+    animation: fadeIn 1s ease-out;
+}
+
+.header p {
+    font-size: 1.2em; /* Increased font size */
+    color: #b2dfdb;
+}
+
+.input-section label {
+    display: block;
+    margin-top: 20px; /* Increased margin */
+    font-size: 1.2em; /* Increased font size */
+    font-weight: bold;
+    color: #e8f5e9;
+    transition: color 0.3s ease;
+}
+
+.input-section label:hover {
+    color: #a5d6a7;
+}
+
+.input-section input, .input-section textarea, .input-section select {
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    margin: 12px 0; /* Increased margin */
+    font-size: 1.1em; /* Increased font size */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px; /* Increased border radius */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #e8f5e9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-section input:focus, .input-section textarea:focus, .input-section select:focus {
+    border-color: #a5d6a7;
+    background-color: rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+textarea {
+    height: 180px; /* Increased height */
+    resize: vertical;
+}
+
+button {
+    padding: 18px 30px; /* Increased padding */
+    font-size: 1.1em; /* Increased font size */
+    background: linear-gradient(to right, #43a047, #2e7d32);
+    color: white;
+    border: none;
+    border-radius: 12px; /* Increased border radius */
+    cursor: pointer;
+    margin-top: 25px; /* Increased margin */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.result-container {
+    margin-top: 30px; /* Increased margin */
+    padding: 25px; /* Increased padding */
+    font-size: 1.1em; /* Increased font size */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px; /* Increased border radius */
+    background-color: rgba(0, 0, 0, 0.3);
+    white-space: pre-wrap;
+    animation: fadeIn 1s ease-out;
+    color: #e8f5e9;
+}
+
+.history-button {
+    position: fixed;
+    top: 15px; /* Increased top position */
+    right: 15px; /* Increased right position */
+    padding: 10px 15px; /* Increased padding */
+    font-size: 1.0em; /* Increased font size */
+    background-color: #43a047;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Increased border radius */
+    cursor: pointer;
+    z-index: 10;
+}
+
+.history-container {
+    margin-top: 30px; /* Increased margin */
+    padding: 20px; /* Increased padding */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px; /* Increased border radius */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #e8f5e9;
+    position: fixed;
+    top: 60px; /* Increased top position */
+    right: 8px; /* Increased right position */
+    width: 90%;
+    max-width: 350px; /* Increased max-width */
+    max-height: 450px; /* Increased max-height */
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.history-container h2 {
+    font-size: 1.4em; /* Increased font size */
+    color: #a5d6a7;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.topic-item, .interaction-item {
+    padding: 10px; /* Increased padding */
+    font-size: 1.0em; /* Increased font size */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px; /* Increased margin */
+    flex-wrap: wrap;
+}
+
+.button-container button {
+    margin-right: 8px; /* Increased margin */
+    margin-bottom: 8px; /* Increased margin */
+    padding: 12px 20px; /* Increased padding */
+    font-size: 1.0em; /* Increased font size */
+}
+
+.loading-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto; /* Increased margin */
+}
+
+.dot {
+    width: 10px; /* Increased dot size */
+    height: 10px; /* Increased dot size */
+    background-color: #a5d6a7;
+    border-radius: 50%;
+    margin: 0 4px; /* Increased margin */
+    animation: pulse 1.4s infinite ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .header h1 {
+        font-size: 2.8em;
+    }
+    .input-section label, .input-section input, .input-section textarea, .input-section select, button, .result-container {
+        font-size: 1.0em;
+    }
+}

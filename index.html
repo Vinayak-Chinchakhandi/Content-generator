@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Content Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="historyButton" class="history-button">History</button>
+        <div id="history" class="history-container" style="display: none;">
+            <h2>Interaction History</h2>
+            <div id="topicList"></div>
+            <div id="interactionList"></div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>AI Content Generator</h1>
+                <p>Content Writing Helper – AI tool that generate and enhance written content for blogs, articles, and more.</p>
+            </div>
+
+            <div class="input-section">
+                <label for="contentType">Content Type:</label>
+                <select id="contentType">
+                    <option value="article">Article</option>
+                    <option value="blog">Blog</option>
+                    <option value="paragraph">Paragraph</option>
+                    <option value="text">Text</option>
+                    <option value="caption">Caption</option>
+                    <option value="story">Story</option>
+                    <option value="shortfilm">Short Film</option>
+                    <option value="poem">Poem</option>
+                </select>
+
+                <label for="tone">Tone:</label>
+                <input type="text" id="tone" placeholder="e.g., Formal, Informal, Narrative">
+
+                <label for="size">Content Size:</label>
+                <select id="size">
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                    <option value="very short">Very Short</option>
+                    <option value="very long">Very Long</option>
+                </select>
+
+                <label for="topic">Topic Name:</label>
+                <input type="text" id="topic" placeholder="Enter topic name">
+
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="Enter description..."></textarea>
+            </div>
+
+            <button id="generate">Generate Content</button>
+            <div id="result" class="result-container"></div>
+            <div class="button-container">
+                <button id="save" style="display:none;">Save as Text</button>
+                <button id="copy" style="display:none;">Copy Text</button>
+                <button id="clear">Clear</button>
+            </div>
+            <div id="loading" class="loading-dots" style="display: none;">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
